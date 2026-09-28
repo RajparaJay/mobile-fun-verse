@@ -121,7 +121,7 @@ function Game() {
     window.addEventListener("orientationchange", fit);
 
     const spawn = () => {
-      const top = stack[stack.length - 1];
+      const top = stack[stack.length - 1]!;
       const i = stack.length;
       dir = i % 2 ? 1 : -1;
       cur = { x: dir > 0 ? -top.w : 360, w: top.w, i, c: col(i) };
@@ -155,7 +155,7 @@ function Game() {
     };
 
     const drop = () => {
-      const top = stack[stack.length - 1];
+      const top = stack[stack.length - 1]!;
       const dx = cur.x - top.x;
       if (Math.abs(dx) <= 6) {
         cur.x = top.x;
