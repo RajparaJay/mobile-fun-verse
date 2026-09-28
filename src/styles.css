@@ -142,3 +142,69 @@
     color: var(--color-foreground);
   }
 }
+
+/* --- Stack the Tide game shell --- */
+.game-root {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #fdf2e9;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Trebuchet MS", system-ui, sans-serif;
+}
+
+.game-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px;
+  padding-bottom: env(safe-area-inset-bottom);
+  color: #3b3346;
+  text-align: center;
+  pointer-events: none;
+}
+
+.game-overlay h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.game-overlay p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.game-overlay button {
+  pointer-events: auto;
+  font: inherit;
+  font-size: 17px;
+  padding: 13px 28px;
+  border: 0;
+  border-radius: 999px;
+  background: #3b3346;
+  color: #fdf2e9;
+  cursor: pointer;
+}
+
+.game-overlay button.alt {
+  background: #f4a6b7;
+  color: #3b3346;
+}
+
+.game-overlay button:focus-visible {
+  outline: 3px solid #3b3346;
+  outline-offset: 3px;
+}
