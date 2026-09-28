@@ -1,0 +1,17 @@
+{
+  "name": "Stack the Tide",
+  "short_name": "Stack Tide",
+  "description": "A one-tap stacking arcade game.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FDF2E9",
+  "theme_color": "#FDF2E9",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
